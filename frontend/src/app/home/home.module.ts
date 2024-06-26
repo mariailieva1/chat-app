@@ -14,39 +14,21 @@ import { SocketService } from './services/socket.service';
 import { AddMemberDialogComponent } from './components/add-member-dialog/add-member-dialog.component';
 import { PublicChannelsPage } from './pages/public-channels/public-channels.page';
 
-const PAGES = [
-  HomePage,
-  ChannelPage,
-  PublicChannelsPage
-]
+const PAGES = [HomePage, ChannelPage, PublicChannelsPage];
 
 const COMPONENTS = [
   ChannelListComponent,
   CreateChannelDialogComponent,
-  AddMemberDialogComponent
-]
+  AddMemberDialogComponent,
+];
 
-const PIPES = [
-  TimeAgoPipe,
-]
+const PIPES = [TimeAgoPipe];
 
-const SERVICES = [
-  ChannelService,
-  DataService,
-  MessagesService,
-  SocketService
-]
+const SERVICES = [ChannelService, DataService, MessagesService, SocketService];
 
 @NgModule({
-  declarations: [
-    ...PAGES,
-    ...COMPONENTS,
-    ...PIPES,
-  ],
-  imports: [
-    SharedModule,
-    HomeRoutingModule
-  ],
-  providers: [...SERVICES, ...PIPES]
+  declarations: [...PAGES, ...COMPONENTS, ...PIPES],
+  imports: [SharedModule, HomeRoutingModule],
+  providers: [...SERVICES, ...PIPES],
 })
-export class HomeModule { }
+export class HomeModule {}

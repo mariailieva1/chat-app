@@ -41,6 +41,7 @@ export class ChannelListComponent implements OnInit {
       this.channels = channels;
       this.filterChannels()
     });
+
     this.dataService.user.subscribe(user => this.user = user);
 
     this.dataService.loadAllChannels();

@@ -77,22 +77,22 @@ export class DataService {
     async loadAllChannels() {
         const channels = await lastValueFrom(this.channelService.getAllChannels())
 
-        this._channels = channels;;
-        this.channels.next(this._channels);
+        this._channels = channels
+        this.channels.next(this._channels)
     }
 
     async loadPublicChannels() {
         const publicChannels = await lastValueFrom(this.channelService.getPublicChannels())
 
-        this._publicChannels = publicChannels;
+        this._publicChannels = publicChannels
         this.publicChannels.next(this._publicChannels)
     }
 
     async loadMessages(channelId: string) {
         const { messages } = await lastValueFrom(this.messagesService.getMessagesByChannelId(channelId))
 
-        this._messages[channelId] = messages;
-        this.messages.next(this._messages);
+        this._messages[channelId] = messages
+        this.messages.next(this._messages)
     }
 
     async loadUserInfo() {

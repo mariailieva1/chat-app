@@ -9,31 +9,6 @@ import { Channel } from '@common/interfaces/channel.interface';
 
 const router = Router();
 
-
-// Create Message
-// messageController.post('/add', async (req, res) => {
-//     try {
-//         const { convoId, sentBy, content, sentAt, received, seen } = req.body;
-
-//         // Create a new message document
-//         const message: Message = {
-//             convoId,
-//             sentBy,
-//             content,
-//             sentAt,
-//             received,
-//             seen
-//         }
-
-//         // Save the message to the database
-//         await defaultMessageModel.create(message);
-
-//         res.status(201).json({ message: 'Message created successfully', newMessage: message });
-//     } catch (error) {
-//         res.status(500).json({ error: 'Internal server error' });
-//     }
-// });
-
 // // Get Messages by Conversation (Channel)
 router.get('/:channelId', authenticate, async (req, res) => {
     try {
