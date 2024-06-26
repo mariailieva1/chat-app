@@ -4,7 +4,7 @@
 - [Overview](#overview)
 
 ## Overview
-This repository contains my submission for my homework for the project. 
+This repository contains submission for project for WEBTech course. 
 
 #### Description of the homework:
 - Implement a prototype of sending messages in real time.
