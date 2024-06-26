@@ -1,10 +1,23 @@
 ## Instant messenger | Project for WEBTech course  
-This repository contains my submission for my homework for the project. 
 
-#### Description of the homework:
-- Implement a prototype of sending messages in real time.
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+  
+## Overview
+This repository contains submission for project for WEBTech course. 
 
-### Built With
+## Features
+- **User Authentication**: Sign up, log in.
+- **Channels**: Create public or private channel, join, see members, see all messages, leave channel, search through messages, invite members.
+- **Search**: Search for messages within channels and search for channels in the list of the channels.
+- **Message History**: Access and view the history of messages in channels.
+- **Real-time Messaging**: Send and receive messages in real-time.
+
+## Technologies
 - Express
 - NodeJS
 - TypeScript
@@ -15,7 +28,7 @@ This repository contains my submission for my homework for the project.
 - SCSS
 - Material
 
-### How to run the project
+## Installation
 1. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
@@ -41,3 +54,10 @@ This repository contains my submission for my homework for the project.
     npm run start
    ```
 6. Open http://localhost:4200
+
+## Usage
+- **Sign Up / Log In**: Create an account or log in with existing credentials.
+- **Create Channels**: Create new channels for different topics or groups.
+- **Join Channels**: Join existing channels to start participating in conversations.
+- **Search Messages**: Use the search bar within channels to find specific messages.
+- **View History**: Scroll through the message history to view past conversations.
