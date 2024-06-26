@@ -1,0 +1,65 @@
+<div class="page">
+  <div class="container" [class.right-panel-active]="!isSignIn">
+    <div class="form-container sign-up-container">
+      <form #signUpForm="ngForm">
+        <h1>Create Account</h1>
+        <input
+          type="text"
+          name="reg_name"
+          [(ngModel)]="user.name"
+          placeholder="Name"
+        />
+        <input
+          type="email"
+          name="reg_email"
+          [(ngModel)]="user.email"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          name="reg_password"
+          [(ngModel)]="user.password"
+          placeholder="Password"
+        />
+        <button (click)="singUp(signUpForm)" style="cursor: pointer">
+          Sign Up
+        </button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form #signInForm="ngForm">
+        <h1>Sign in</h1>
+        <input
+          type="email"
+          name="login_email"
+          [(ngModel)]="user.email"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          name="login_password"
+          [(ngModel)]="user.password"
+          placeholder="Password"
+        />
+        <button (click)="signIn(signInForm)" style="cursor: pointer">
+          Sign In
+        </button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel" [class]="overlayClass">
+          <h1>{{overlayTitle}}</h1>
+          <p>{{overlayText}}</p>
+          <button
+            class="ghost"
+            (click)="isSignIn = !isSignIn"
+            style="cursor: pointer"
+          >
+            {{overlayButton}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

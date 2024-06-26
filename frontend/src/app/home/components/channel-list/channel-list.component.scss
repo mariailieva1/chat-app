@@ -1,0 +1,128 @@
+@import 'variables.scss';
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+
+    h1, h3 {
+        margin: 0;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .user,
+    .channel {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .user {
+        color: #fff;
+        background-color: $secondary;
+        margin: 0;
+        font-weight: bold;
+        justify-content: space-between;
+    }
+
+    .channel {
+        color: $primary-text;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary;
+        }
+
+        &.active {
+            background-color: $secondary;
+        }
+    }
+
+    .channel:first-child {
+        margin-top: 40px;
+    } 
+
+    .search {
+        height: 30px;
+        width: 100%;
+
+        ::ng-deep {
+          .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: #ebd9ce !important;
+            color: #84649d;
+          }
+
+          .mat-focus-indicator,
+          .mat-sort-header-container,
+          .mdc-line-ripple::before,
+          .mdc-line-ripple::after,
+          .mdc-line-ripple::before,
+          .mat-focus-indicator,
+          .mat-sort-header-container {
+            border: 1px solid $secondary;
+            color: #84649d;
+          }
+
+          .mat-mdc-text-field-wrapper {
+            height: 30px !important;
+            color: #84649d;
+          }
+          .mat-mdc-form-field-flex {
+            margin-top: -13px !important;
+          }
+
+          .mat-focused,
+          .mat-form-field-label {
+            color: #84649d !important;
+          }
+
+          .mat-form-field-appearance-outline.mat-focused
+            .mat-form-field-outline-thick {
+            color: #84649d !important;
+          }
+
+          .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+            .mdc-notched-outline--upgraded
+            .mdc-floating-label--float-above {
+            color: #84649d;
+          }
+          .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+            color: #84649d;
+          }
+
+          .mdc-text-field:not(.mdc-text-field--disabled)
+            .mdc-text-field__input {
+            color: #84649d;
+          }
+
+          .mat-focused,
+          .placeholder {
+            color: #84649d;
+          }
+        }
+
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+          color: #666;
+        }
+        input:-moz-placeholder,
+        textarea:-moz-placeholder {
+          color: #666;
+        }
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+          color: #666;
+        }
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder {
+          color: #666;
+        }
+      }
+}

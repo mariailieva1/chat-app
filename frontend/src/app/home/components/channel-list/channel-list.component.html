@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="search">
+    <mat-form-field>
+      <!-- <mat-label>Search</mat-label> -->
+      <input
+        matInput
+        [(ngModel)]="searchValue"
+        (ngModelChange)="filterChannels()"
+        placeholder="Search"
+      />
+    </mat-form-field>
+  </div>
+  <div class="channel" [routerLink]="['/']" [class.active]="isHomeActive">
+    <h1>Home</h1>
+  </div>
+  <div
+    class="channel"
+    *ngFor="let channel of filteredChannels"
+    [routerLink]="['channel', channel._id]"
+    routerLinkActive="active"
+  >
+    <h3>{{ channel.name }}</h3>
+  </div>
+  <div class="channel" (click)="addChannel()">
+    <h3>Add channel</h3>
+    <mat-icon>add</mat-icon>
+  </div>
+  <div class="spacer"></div>
+  <div class="user" *ngIf="user">
+    <h3>{{ user.name }}</h3>
+    <button mat-icon-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</div>

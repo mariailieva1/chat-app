@@ -1,0 +1,35 @@
+<h1 class="title">Public channels</h1>
+<div class="channels">
+  <mat-card *ngFor="let ch of publicChannels">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="channel-name">Name: {{ch.name}}</div>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div>
+        Description: {{ch.description}}
+      </div>
+      <div>
+        Members:
+        <mat-chip-set aria-label="Members">
+          <mat-chip *ngFor="let member of getFirstMembers(ch.members)" [matTooltip]="member.name">
+            {{getShortName(member.name)}}</mat-chip>
+          <mat-chip *ngIf="ch.members.length > 3" [matTooltip]="getLastMembers(ch.members)">+{{ch.members.length -
+            3}}</mat-chip>
+        </mat-chip-set>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <ng-container *ngIf="isJoined(ch); else join">
+        <button mat-flat-button [routerLink]="['channel', ch._id]">Open</button>
+        <button mat-flat-button (click)="leaveChannel(ch)">Leave</button>
+      </ng-container>
+      <ng-template #join>
+        <button mat-flat-button (click)="joinChannel(ch)">Join</button>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
+</div>

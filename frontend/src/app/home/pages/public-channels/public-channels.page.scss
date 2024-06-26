@@ -1,0 +1,35 @@
+.title {
+  margin: 20px;
+}
+
+.channels {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    flex-basis: calc(50% - 40px);
+    margin: 20px;
+  }
+}
+
+mat-card {
+  background-color: #efeef3;
+  color: #907394;
+
+  .channel-name {
+    border-bottom: 1px solid #907394;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    border: 1px solid #b89dc8;
+    background-color: #b89dc8;
+    color: white;
+  }
+
+  button:disabled,
+  button[disabled]{
+    opacity: 0.5;
+  }
+}

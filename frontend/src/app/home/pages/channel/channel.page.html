@@ -1,0 +1,60 @@
+<div class="channel">
+  <div class="channel-content">
+    <div class="channel-name">
+      <h1>{{channel?.name}}</h1>
+      <div class="search">
+        <mat-form-field>
+          <!-- <mat-label>Search</mat-label> -->
+          <input matInput [(ngModel)]="searchValue" (ngModelChange)="filterMessages()" placeholder="Search" />
+        </mat-form-field>
+      </div>
+    </div>
+    <!-- <div class="message" *ngFor="let message of messages">{{message.content}}</div> -->
+    <div class="content">
+      <div class="chats" id="chats">
+        <div class="messages" #messagesContainer>
+          <ng-container *ngFor="let message of filteredMessages">
+            <div class="message" *ngIf="message.sentBy"
+              [ngClass]="{'my-chats': message.sentBy._id == user?._id, 'other-chats': message.sentBy._id != user?._id}">
+              <div class="user-msg">
+                <span class="username">{{message.sentBy.name}}</span>
+                <span class="time">{{message.sentAt | timeAgo}}</span>
+              </div>
+              <div class="message-content">{{message.content}}</div>
+            </div>
+
+            <div class="username" *ngIf="!message.sentBy">
+              {{message.content}}
+            </div>
+          </ng-container>
+        </div>
+        <div class="inputs" id="inputs">
+          <input type="text" class="message" placeholder="Type a message" (keyup)="sendMessageIfEnter($event)"
+            [(ngModel)]="newMessage"/>
+          <button mat-icon-button (click)="sendMessage">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="channel-settings">
+    <div class="channel-members">
+      <h2>Description</h2>
+      <div>{{channel?.description}}</div>
+      <h2 class="members-header">Members</h2>
+      <div class="member" *ngFor="let member of channel?.members">
+        <div class="member-name">{{member.name}}</div>
+      </div>
+    </div>
+    <div class="channel-actions">
+      <button mat-raised-button class="add-btn" color="primary" (click)="addMember()">
+        Add Member
+      </button>
+      <button mat-stroked-button class="leave-btn" color="primary" (click)="leaveChannel()">
+        Leave Channel
+      </button>
+    </div>
+  </div>
+</div>

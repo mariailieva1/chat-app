@@ -1,0 +1,20 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "This repository contains my submission for my homework for the project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://markovsolutions@bitbucket.org/markov-solutions/chat-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/markov-solutions/chat-app/issues"
+  },
+  "homepage": "https://bitbucket.org/markov-solutions/chat-app#readme"
+}
