@@ -1,4 +1,9 @@
 ## Instant messenger | Project for WEBTech course  
+
+## Table of Contents
+- [Overview](#overview)
+
+## Overview
 This repository contains my submission for my homework for the project. 
 
 #### Description of the homework:
