@@ -9,12 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://markovsolutions@bitbucket.org/markov-solutions/chat-app.git"
+    "url": "https://github.com/mariailieva1/chat-app/tree/master"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://bitbucket.org/markov-solutions/chat-app/issues"
-  },
-  "homepage": "https://bitbucket.org/markov-solutions/chat-app#readme"
+  "license": "ISC"
 }
