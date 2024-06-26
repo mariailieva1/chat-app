@@ -62,3 +62,8 @@
   color: $primary;
   border-color: $primary;
 }
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
