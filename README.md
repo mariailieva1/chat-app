@@ -6,7 +6,7 @@
 ## Overview
 This repository contains submission for project for WEBTech course. 
 
-#### Description of the homework:
+#### Description of the project:
 - Implement a prototype of sending messages in real time.
 
 ### Built With
