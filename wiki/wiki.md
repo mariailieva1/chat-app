@@ -47,7 +47,10 @@ Instant Messenger проекта има за цел да предостави п
 ![Register](sign.png)
 
 #### 1.3.2 Логин
+![Login](login.png)
 
 #### 1.3.3 Начална страница
+![Home page](home.png)
 
 #### 1.3.5 Изглед на канал
+![Channel](channel.png)
