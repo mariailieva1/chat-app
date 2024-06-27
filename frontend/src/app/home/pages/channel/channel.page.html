@@ -31,7 +31,7 @@
         <div class="inputs" id="inputs">
           <input type="text" class="message" placeholder="Type a message" (keyup)="sendMessageIfEnter($event)"
             [(ngModel)]="newMessage"/>
-          <button mat-icon-button (click)="sendMessage">
+          <button mat-icon-button (click)="sendMessage()">
             <mat-icon>send</mat-icon>
           </button>
         </div>

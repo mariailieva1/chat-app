@@ -22,11 +22,8 @@
 ## Съдържание:
 
 1. Идея на проекта
-2. Архитектура
-3. Схема на базата
-4. Използвани технологии
-5. Литература
-6. Разпределение по проекта
+2. Използвани технологии
+
 
 ## 1. Идея на проекта
 
@@ -47,7 +44,28 @@ Instant Messenger проекта има за цел да предостави п
 ![Register](sign.png)
 
 #### 1.3.2 Логин
+![Login](login.png)
 
 #### 1.3.3 Начална страница
+![Home page](home.png)
 
 #### 1.3.5 Изглед на канал
+![Channel](channel.png)
+
+## 2. Използвани технологии
+### Frontend:
+- Angular
+- HTML
+- SCSS
+- Typescript
+
+### Backend
+- Node.js
+- Express.js
+- Socket.io
+- JWT
+- Bcrypt
+
+### Database
+- MongoDB
+- Mongoose
